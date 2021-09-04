@@ -1,0 +1,387 @@
+<body>
+  
+
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+      <div class="sidebar ">
+        <div class="sidebar-main" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          <ul>
+            <div>
+              <a href="#">
+                <h3 style="background-color:#A2EFF7;"><img height="60px" width="110px" src="../../assets/sciqus.png"
+                    alt=""></h3>
+              </a>
+            </div>
+            <h6 style="background-color:#A2EFF7; height: 1ch;"></h6>
+            <form style="background:#A2EFF7;">
+              <div class=" p-1 bg-light rounded rounded-pill shadow-sm"
+                style="height: 4ch;width: 15ch; margin-left: 2.5ch;">
+                <div class="input-group w-75 " style="margin-left: 1ch;">
+                  <div class="input-group-prepend">
+                    <button id="button-addon2" type="submit" class="btn btn-link text-dark "><i
+                        class="fa fa-fw fa-search"></i></button>
+                  </div>
+                  <input type="search"  placeholder="Search" class="form-control border-0 bg-light "
+                    style="width: -500px; ">
+                </div>
+              </div>
+            </form>
+  
+     
+     
+            <li>
+              <a routerLink="/"style="background-color:#90EEF8;color:rgb(255, 255, 255);"> Dashboard</a>
+            </li>
+  
+            <li>
+              <a href="#ProjectsSubmenu" style="background-color:#6FE9F6;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Projects</a>
+              <ul class="collapse list-unstyled" id="ProjectsSubmenu">
+                  <li>
+                      <a routerLink="/projects" style="background-color:#4DE5F3;color:rgb(255, 255, 255);">All Projects</a>
+                  </li>
+                  <li>
+                      <a routerLink="/addproject" style="background-color:#2BDFF0;color:rgb(255, 255, 255);">ADD Project</a>
+                  </li>
+                 
+              </ul>
+          </li>
+               
+          <li>
+            <a href="#CategoriesSubmenu" style="background-color:#4DE5F3;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Category</a>
+            <ul class="collapse list-unstyled" id="CategoriesSubmenu">
+                <li>
+                    <a routerLink="/categories" style="background-color:#2BDFF0;color:rgb(255, 255, 255);">All Categories</a>
+                </li>
+                <li>
+                    <a routerLink="/createcategory" style="background-color:#0ED6EB;color:rgb(255, 255, 255);">Create Categories</a>
+                </li>
+               
+            </ul>
+        </li>
+  
+            <li>
+              <a href="#vendorSubmenu" style="background-color:#2BDFF0;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Vendors</a>
+              <ul class="collapse list-unstyled" id="vendorSubmenu">
+                <li>
+                  <a routerLink="/allvendors" style="background-color:#0ED6EB;color:rgb(255, 255, 255);">All Vendors</a>
+              </li>
+              <li>
+                  <a routerLink="/vendors" style="background-color:#0CB7C9;color:rgb(255, 255, 255);">Add Vendor</a>
+              </li>
+              <li>
+                  <a routerLink="/pendingvendorverification" style="background-color:#0A99A9;color:rgb(255, 255, 255);">Pending Vendor Verification</a>
+              </li>
+              </ul>
+          </li>  
+  
+            <li>
+              <a href="#Project_HeadSubmenu" style="background-color:#0ED6EB;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Project Head</a>
+              <ul class="collapse list-unstyled" id="Project_HeadSubmenu">
+                <li>
+                  <a routerLink="/projecthead" style="background-color:#0CB7C9;color:rgb(255, 255, 255);">Project Head</a>
+              </li>
+              <li>
+                  <a routerLink="/addprojecthead" style="background-color:#0A99A9;color:rgb(255, 255, 255);">Add Project Head</a>
+              </li>
+             
+              </ul>
+          </li>
+  
+          <li>
+            <a href="#poSubmenu" style="background-color:#0CB7C9;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Purchase Order</a>
+            <ul class="collapse list-unstyled" id="poSubmenu">
+                <li>
+                    <a routerLink="/allpurchaseorder" style="background-color:#0A99A9;color:rgb(255, 255, 255);">All Purchase Orders</a>
+                </li>
+                <li>
+                    <a  routerLink="/purchaseorder" style="background-color:#087A85;color:rgb(255, 255, 255);">send Purchase Order</a>
+                </li>
+               
+            </ul>
+        </li>
+  
+          <li>
+            <a href="#GRNSubmenu" style="background-color:#0A99A9;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">GRN</a>
+            <ul class="collapse list-unstyled" id="GRNSubmenu">
+                <li>
+                    <a routerLink="/grn" style="background-color:#087A85;color:rgb(255, 255, 255);">All GRN</a>
+                </li>
+                <li>
+                    <a routerLink="/approvegrn" style="background-color:#075B65;color:rgb(255, 255, 255);">Approve GRN</a>
+                </li>
+               
+            </ul>
+        </li>
+  
+        <li>
+          <a href="#InvoicesSubmenu" style="background-color:#087A85;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invoices</a>
+          <ul class="collapse list-unstyled" id="InvoicesSubmenu">
+              <li>
+                  <a routerLink="/invoices" style="background-color:#075B65;color:rgb(255, 255, 255);">All Invoices</a>
+              </li>
+              <li>
+                  <a  routerLink="/approveinvoices" style="background-color:#043D44;color:rgb(255, 255, 255);">Approve Invoices</a>
+              </li>
+             
+          </ul>
+      </li>  
+       
+            <li>
+              <a href="#PoliciesSubmenu" style="background-color:#075B65;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Policies</a>
+              <ul class="collapse list-unstyled" id="PoliciesSubmenu">
+                  <li>
+                      <a routerLink="/policies" style="background-color:#043D44;color:rgb(255, 255, 255);">All Policies</a>
+                  </li>
+                  <li>
+                      <a  routerLink="/publishpolicies" style="background-color:#032a30;color:rgb(255, 255, 255);">Publish Policies</a>
+                  </li>
+                 
+              </ul>
+          </li>
+             
+            <li>
+              <a href="#NewsSubmenu" style="background-color:#043D44;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">News</a>
+              <ul class="collapse list-unstyled" id="NewsSubmenu">
+                  <li>
+                      <a routerLink="/news" style="background-color:#032a30;color:rgb(255, 255, 255);">All News</a>
+                  </li>
+                  <li>
+                      <a  routerLink="/postnews" style="background-color:#08282c;color:rgb(255, 255, 255);">Post News</a>
+                  </li>
+                 
+              </ul>
+          </li>
+  
+          <li>
+            <a href="#RFQSubmenu" style="background-color:#032a30;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">RFQ/RFP</a>
+            <ul class="collapse list-unstyled" id="RFQSubmenu">
+                <li>
+                    <a routerLink="/rfq" style="background-color:#08282c;color:rgb(255, 255, 255);">All RFQ/RFP</a>
+                </li>
+                <li>
+                    <a  routerLink="/publishrfq" style="background-color:#052225;color:rgb(255, 255, 255);">Publish RFQ/RFP</a>
+                </li>
+               
+            </ul>
+        </li>
+  
+          </ul>
+        </div>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+
+        <span style="font-family: 'Segoe UI'; font-size: 2.8ch;margin-left: 2ch;" class="text-start">Vendor Portal </span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon " aria-label="Example icon-button with heart icon">
+          <mat-icon>email</mat-icon>
+        </button>
+        <!-- <button mat-icon-button class="example-icon " aria-label="Example icon-button with heart icon">
+          <mat-icon>settings</mat-icon>
+        </button> -->
+        <a href="" style="color: black;">
+            
+          <button mat-icon-button class="example-icon " aria-label="Example icon-button with account_circle icon">
+            <mat-icon>account_circle</mat-icon>
+          </button> </a>
+       
+
+
+      </mat-toolbar>
+   
+      <mat-toolbar style="background-color: #CFD4D5;">
+        <span style="margin-left: 3.5ch;">Dashboard</span>
+        <span class="spacer"></span>
+      
+          <!-- <a href="" style="color: black;">
+            
+            <button mat-icon-button class="example-icon " aria-label="Example icon-button with account_circle icon">
+              <mat-icon>account_circle</mat-icon>
+            </button> </a>
+         
+       
+        <span>User Name</span> -->
+      </mat-toolbar>
+<!--   
+      <div class="content">
+        <div fxLayout="row wrap" fxLayoutGap="5px grid">
+          <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let num of cards">
+           <a href=""> <mat-card style="background: #0CB7C9;" class="mat-elevation-z4">
+              <mat-card-header>
+                <div  style="margin-top: 1ch;margin-right: 1ch;padding-right: 1ch;"><img height="70px" width="70px" src="{{num.image}}" alt=""></div>
+                <div style="text-align:center;margin-left: 2ch;color:white;margin-top: 2.5ch;">
+                  <mat-card-title><h6>{{num.title}}</h6></mat-card-title>
+                  <mat-card-title><h5>{{num.value}}</h5></mat-card-title>
+                </div>
+              </mat-card-header>
+            </mat-card>
+        </a>
+          </div>
+        </div>
+      </div>
+   -->
+  
+   <div class="container-fluid" >
+  
+    <div class="container-fluid" >     
+      <div class="row" style="margin-left: 2ch;">
+        <div class="col-sm-3 col-lg-3"  >
+       
+      <div class="container"  >
+      
+        <div class="cart">
+      
+          <div class="products">
+      
+            <div class="product"  style="border-radius: 30px;">
+      
+              <img src="../../assets/Total-Vender.png" >
+      
+              <div class="product-info">
+      
+                <h5 class="product-name">Total Vendors</h5>
+                <h5 class="product-price">150</h5>
+      
+               </div>
+      
+            </div>
+         </div>
+      
+        </div>
+      
+      </div>
+      
+        </div>
+        <div class="col-sm-3 col-lg-3" >
+          
+      <div class="container" >
+      
+        
+        <div class="cart">
+      
+          <div class="products">
+      
+            <div class="product"  style="border-radius: 30px;">
+      
+              <img src="../../assets/Live-Contracts.png" >
+      
+              <div class="product-info">
+      
+                <h5 class="product-name">Live Contracts</h5>
+                <h5 class="product-price">80</h5>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+      </div>
+      
+        </div>
+        <div class="col-sm-3 col-lg-3" >
+          
+          <div class="container" >
+          
+            
+            <div class="cart">
+          
+              <div class="products">
+          
+                <div class="product"  style="border-radius: 30px;">
+          
+                  <img src="../../assets/Released-PO.png" >
+          
+                  <div class="product-info">
+          
+                    <h5 class="product-name">Released PO</h5>
+                    <h5 class="product-price">20</h5>
+                 </div>
+          
+                </div>
+              </div>
+           </div>
+        </div>
+      </div>
+  
+            <div class="col-sm-3 col-lg-3" >
+          
+              <div class="container" >
+              
+                
+                <div class="cart">
+              
+                  <div class="products">
+              
+                    <div class="product"  style="border-radius: 30px;">
+              
+                      <img src="../../assets/New-Vendor.png" >
+              
+                      <div class="product-info">
+              
+                        <h5 class="product-name">New Vendors</h5>
+                        <h5 class="product-price">07</h5>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <div  fxLayout="row wrap " style="margin-left: 10ch;"  fxLayoutAlign=" center" fxLayoutGap=" 1px grid" >
+      <div style="margin-left: 2ch; border-radius: 0 0 20px 20px; border: none; box-shadow: rgba(0, 0, 0, 0.16) 2.4px 2.4px 3.2px; " fxFlex="25%" fxFlex.xs="80%" *ngFor="let num of card" >
+        <a href="">
+          <div class="card text-center" style="border: none; background-color: #FAFAFA; border-radius: 0 0 20px 20px;">
+         
+   
+            <div class="card-body">
+              <h5 class="card-title " >{{num.title}}</h5>
+             
+             
+              <div class="card-header">{{num.value}}</div>
+            </div>
+
+        </div>
+      </a>
+      </div>
+    </div>
+  </div> 
+       
+       <div fxLayout="row wrap" style="margin-top: 2ch;" fxLayoutAlign=""fxLayoutGap=" 2px grid">
+      <div  style="margin-left: 40px;" fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="33%"> 
+          <h5 style="margin-left: 1ch;">Purches order</h5>
+        <img style="margin-top: 1ch;" height="350" width="450"  src="../../assets/Mask Group 2.png" alt="">
+     </div>
+      <div fxFlex="26%" fxFlex.xs="100%" style="margin-left: 90px;" fxFlex.sm="33%">
+        <h5 style="margin-left: 1ch;">Invoice</h5>
+        <img style="margin-top: 1ch;" height="350" width="290" src="../../assets/Mask Group 3.png" alt=""></div>
+      <div fxFlex="30%"fxLayout="row wrap">
+          <div fxFlex.xs="100%" fxFlex.sm="33%"> 
+            <h5 style="margin-left: 1ch;">Insurance Renewal</h5>
+            <img style="margin-top: 1ch;" height="150" width="350" src="../../assets/Group 2.png" alt="">
+          </div>
+          <div fxFlex.xs="100%" fxFlex.sm="33%">
+            <h5 style="margin-left: 1ch;">Contract Renewal</h5>
+            <img style="margin-top: 1ch;" height="150" width="350" src="../../assets/Group 1.png" alt="">  
+        </div>
+      </div>
+      
+      
+       </div>
+  
+  
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+</body>

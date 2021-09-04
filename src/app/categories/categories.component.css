@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+
+}
+.mat-sidenav-container .mat-sidenav .sidebar{
+  display: flex;
+  position: relative;
+  
+
+}
+body{
+  font-family: 'Segoe UI';
+}
+
+.mat-sidenav-container .mat-sidenav .sidebar .sidebar-main img{
+margin-left: 2ch;
+padding-top: 1ch;
+
+}
+.mat-sidenav-container .mat-sidenav .sidebar .sidebar-main ul h6{
+    height: 7.1ch;
+    width: 22.2ch;
+    text-align: center;
+    padding-top:2.5ch;
+}
+
+.mat-sidenav-container .mat-sidenav .sidebar .sidebar-main ul h6{
+  height: 7.1ch;
+  width: 22.2ch;
+  text-align: center;
+  padding-top:2.5ch;
+}
+
+.sidenav-container {
+height: 100%;
+}
+
+.mat-sidenav-container .mat-sidenav .sidebar .sidebar-main ul li a {
+padding: 20px;
+font-size: 1.1em;
+display: block;
+text-align: center;
+}
+.mat-sidenav-container .mat-sidenav .sidebar .sidebar-main ul li .dropdown-toggle::after {
+display: block;
+position: absolute;
+top: 50%;
+right: 20px;
+transform: translateY(-50%);
+}
+
+.mat-sidenav-container .mat-sidenav .sidebar .sidebar-main ul li .active>a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6FE9F6;
+}
+.mat-sidenav-container .mat-sidenav .sidebar .sidebar-main ul.components {
+padding: 20px 0;
+border-bottom: 1px solid #47748b;
+}
+
+
+
+
+
+
+.mat-sidenav-container .mat-sidenav .sidebar .sidebar-main ul li a[data-toggle="collapse"] {
+position: relative;
+}
+
+
+
+ul ul a {
+font-size: 0.9em !important;
+padding-left: 30px !important;
+background: #6FE9F6;
+}
+
+ul.CTAs {
+padding: 20px;
+}
+
+ul.CTAs a {
+text-align: center;
+font-size: 0.9em !important;
+display: block;
+border-radius: 5px;
+margin-bottom: 5px;
+}
+
+
+.sidenav-container {
+  height: 100%;
+}
+
+
+
+span.example-spacer {
+  flex: 1 1 auto;
+}
+span.spacer {
+  flex: 1 1 auto;
+}
+/* Structure */
+table {
+width: 100%;
+}
+.wrapper{
+background: #0CB7C9;
+margin: 5ch;
+padding: 10px;
+display: flex;
+border-radius: 10px;
+}
+
+
+/* .wrapper .input {
+width: 100%;
+padding: 15px 20px;
+border: none;
+border-radius: 10px;
+font-weight: bold;
+}
+*/
+
+.searchbox
+{
+padding: 10px 25px;
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+width: 98%;
+}
+.searchbox input{
+line-height: 30px;
+background: none;
+border:none;
+outline: none;
+width:88%;
+}
+.searchbox button{
+width: 130px;
+height: 35px;
+}
+
+
+
+
+
+.mat-row:hover .mat-cell {
+background-color: #65afb827;
+}
+
+
+
+
+
+
+
+.demo-table {
+  width: 100%;
+  box-shadow: none;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.ng-container .mat-cell button {
+  display: table-cell;
+  width: 490px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+.mat-header-cell{
+  text-align: center;
+}
+.mat-cell{
+  text-align: center;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+
+
+.export{
+  padding: 1ch;
+  border-radius: 30px 0 30px 30px; 
+ width: 12ch;
+ margin-right: 3ch;
+ margin-bottom: 2ch;
+background: #0CB7C9;
+color: white;
+
+
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+

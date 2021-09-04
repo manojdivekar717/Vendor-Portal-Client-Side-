@@ -1,0 +1,312 @@
+<body>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <div class="sidebar ">
+      <div class="sidebar-main" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <ul>
+          <div>
+            <a href="#">
+              <h3 style="background-color:#A2EFF7;"><img height="60px" width="110px" src="../../assets/sciqus.png"
+                  alt=""></h3>
+            </a>
+          </div>
+          <h6 style="background-color:#A2EFF7; height: 1ch;"></h6>
+          <form style="background:#A2EFF7;">
+            <div class=" p-1 bg-light rounded rounded-pill shadow-sm"
+              style="height: 4ch;width: 15ch; margin-left: 2.5ch;">
+              <div class="input-group w-75 " style="margin-left: 1ch;">
+                <div class="input-group-prepend">
+                  <button id="button-addon2" type="submit" class="btn btn-link text-dark "><i
+                      class="fa fa-fw fa-search"></i></button>
+                </div>
+                <input type="search" placeholder="Search" class="form-control border-0 bg-light "
+                  style="width: -500px;">
+              </div>
+            </div>
+          </form>
+
+
+
+   
+     
+          <li>
+            <a routerLink="/"style="background-color:#90EEF8;color:rgb(255, 255, 255);"> Dashboard</a>
+          </li>
+
+          <li>
+            <a href="#ProjectsSubmenu" style="background-color:#6FE9F6;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Projects</a>
+            <ul class="collapse list-unstyled" id="ProjectsSubmenu">
+                <li>
+                    <a routerLink="/projects" style="background-color:#4DE5F3;color:rgb(255, 255, 255);">All Projects</a>
+                </li>
+                <li>
+                    <a routerLink="/addproject" style="background-color:#2BDFF0;color:rgb(255, 255, 255);">ADD Project</a>
+                </li>
+               
+            </ul>
+        </li>
+             
+        <li>
+          <a href="#CategoriesSubmenu" style="background-color:#4DE5F3;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Category</a>
+          <ul class="collapse list-unstyled" id="CategoriesSubmenu">
+              <li>
+                  <a routerLink="/categories" style="background-color:#2BDFF0;color:rgb(255, 255, 255);">All Categories</a>
+              </li>
+              <li>
+                  <a routerLink="/createcategory" style="background-color:#0ED6EB;color:rgb(255, 255, 255);">Create Categories</a>
+              </li>
+             
+          </ul>
+      </li>
+
+          <li>
+            <a href="#vendorSubmenu" style="background-color:#2BDFF0;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Vendors</a>
+            <ul class="collapse list-unstyled" id="vendorSubmenu">
+              <li>
+                <a routerLink="/allvendors" style="background-color:#0ED6EB;color:rgb(255, 255, 255);">All Vendors</a>
+            </li>
+            <li>
+                <a routerLink="/vendors" style="background-color:#0CB7C9;color:rgb(255, 255, 255);">Add Vendor</a>
+            </li>
+            <li>
+                <a routerLink="/pendingvendorverification" style="background-color:#0A99A9;color:rgb(255, 255, 255);">Pending Vendor Verification</a>
+            </li>
+            </ul>
+        </li>  
+
+          <li>
+            <a href="#Project_HeadSubmenu" style="background-color:#0ED6EB;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Project Head</a>
+            <ul class="collapse list-unstyled" id="Project_HeadSubmenu">
+              <li>
+                <a routerLink="/projecthead" style="background-color:#0CB7C9;color:rgb(255, 255, 255);">Project Head</a>
+            </li>
+            <li>
+                <a routerLink="/addprojecthead" style="background-color:#0A99A9;color:rgb(255, 255, 255);">Add Project Head</a>
+            </li>
+           
+            </ul>
+        </li>
+
+        <li>
+          <a href="#poSubmenu" style="background-color:#0CB7C9;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Purchase Order</a>
+          <ul class="collapse list-unstyled" id="poSubmenu">
+              <li>
+                  <a routerLink="/allpurchaseorder" style="background-color:#0A99A9;color:rgb(255, 255, 255);">All Purchase Orders</a>
+              </li>
+              <li>
+                  <a  routerLink="/purchaseorder" style="background-color:#087A85;color:rgb(255, 255, 255);">send Purchase Order</a>
+              </li>
+             
+          </ul>
+      </li>
+
+        <li>
+          <a href="#GRNSubmenu" style="background-color:#0A99A9;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">GRN</a>
+          <ul class="collapse list-unstyled" id="GRNSubmenu">
+              <li>
+                  <a routerLink="/grn" style="background-color:#087A85;color:rgb(255, 255, 255);">All GRN</a>
+              </li>
+              <li>
+                  <a routerLink="/approvegrn" style="background-color:#075B65;color:rgb(255, 255, 255);">Approve GRN</a>
+              </li>
+             
+          </ul>
+      </li>
+
+      <li>
+        <a href="#InvoicesSubmenu" style="background-color:#087A85;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Invoices</a>
+        <ul class="collapse list-unstyled" id="InvoicesSubmenu">
+            <li>
+                <a routerLink="/invoices" style="background-color:#075B65;color:rgb(255, 255, 255);">All Invoices</a>
+            </li>
+            <li>
+                <a  routerLink="/approveinvoices" style="background-color:#043D44;color:rgb(255, 255, 255);">Approve Invoices</a>
+            </li>
+           
+        </ul>
+    </li>  
+     
+          <li>
+            <a href="#PoliciesSubmenu" style="background-color:#075B65;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Policies</a>
+            <ul class="collapse list-unstyled" id="PoliciesSubmenu">
+                <li>
+                    <a routerLink="/policies" style="background-color:#043D44;color:rgb(255, 255, 255);">All Policies</a>
+                </li>
+                <li>
+                    <a  routerLink="/publishpolicies" style="background-color:#032a30;color:rgb(255, 255, 255);">Publish Policies</a>
+                </li>
+               
+            </ul>
+        </li>
+           
+          <li>
+            <a href="#NewsSubmenu" style="background-color:#043D44;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">News</a>
+            <ul class="collapse list-unstyled" id="NewsSubmenu">
+                <li>
+                    <a routerLink="/news" style="background-color:#032a30;color:rgb(255, 255, 255);">All News</a>
+                </li>
+                <li>
+                    <a  routerLink="/postnews" style="background-color:#08282c;color:rgb(255, 255, 255);">Post News</a>
+                </li>
+               
+            </ul>
+        </li>
+
+        <li>
+          <a href="#RFQSubmenu" style="background-color:#032a30;color:rgb(255, 255, 255);" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">RFQ/RFP</a>
+          <ul class="collapse list-unstyled" id="RFQSubmenu">
+              <li>
+                  <a routerLink="/rfq" style="background-color:#08282c;color:rgb(255, 255, 255);">All RFQ/RFP</a>
+              </li>
+              <li>
+                  <a  routerLink="/publishrfq" style="background-color:#052225;color:rgb(255, 255, 255);">Publish RFQ/RFP</a>
+              </li>
+             
+          </ul>
+      </li>
+
+        </ul>
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+
+      <span style="font-family: 'Segoe UI'; font-size: 2.8ch;margin-left: 2ch;" class="text-start">Vendor Portal </span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon " aria-label="Example icon-button with heart icon">
+        <mat-icon>email</mat-icon>
+      </button>
+      <!-- <button mat-icon-button class="example-icon " aria-label="Example icon-button with heart icon">
+        <mat-icon>settings</mat-icon>
+      </button> -->
+      
+      <a href="" style="color: black;">
+          
+        <button mat-icon-button class="example-icon " aria-label="Example icon-button with account_circle icon">
+          <mat-icon>account_circle</mat-icon>
+        </button> </a>
+     
+
+
+    </mat-toolbar>
+ 
+    <mat-toolbar style="background-color: #CFD4D5;">
+      <span style="margin-left: 3.5ch;">Purchase Orders</span>
+      <span class="spacer"></span>
+    
+        <!-- <a href="" style="color: black;">
+          
+          <button mat-icon-button class="example-icon " aria-label="Example icon-button with account_circle icon">
+            <mat-icon>account_circle</mat-icon>
+          </button> </a>
+       
+     
+      <span>User Name</span> -->
+    </mat-toolbar>
+    
+    <div class="wrapper">
+      <div class="searchbox" fxLayout="row">
+        
+      <input id="textbox" matInput (keyup)="applyFilter($any($event.target).value)"  type="text"  placeholder="Search"> 
+      
+     
+       
+        <button  mat-button  style="background: #0CB7C9; border-radius: 30PX; margin: 5px;color:white;">SEARCH</button>&nbsp;&nbsp;
+        
+        <button mat-button style="background-color:#0CB7C9; border-radius: 30PX; margin: 5px;color:white;">CLEAR INPUT</button>
+      </div>
+    </div>
+    
+   <div style="box-shadow:#4CC9D9 0px 0px 0px 3px ;margin: 4ch; border-radius: 4px;" > 
+     <table  mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table "> 
+        <ng-container matColumnDef="SR_NO">
+            <th mat-header-cell *matHeaderCellDef>SR NO</th>
+            <td mat-cell *matCellDef="let element">{{element.SR_NO}}</td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="PURCHASE_ORDER_NO">
+          <th mat-header-cell *matHeaderCellDef>PURCHASE ORDER NO.</th>
+          <td mat-cell *matCellDef="let element">{{element.PURCHASE_ORDER_NO}}</td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="VENDOR_NAME">
+          <th mat-header-cell *matHeaderCellDef>VENDOR NAME</th>
+          <td mat-cell *matCellDef="let element">{{element.VENDOR_NAME}}</td>
+        </ng-container>
+      
+      
+        <ng-container matColumnDef="RELEASE_ON">
+          <th mat-header-cell *matHeaderCellDef >RELEASE ON</th>
+          <td mat-cell *matCellDef="let element">{{element.RELEASE_ON}}</td>
+        </ng-container>
+    
+          <ng-container matColumnDef="ACCEPTED_ON">
+            <th mat-header-cell *matHeaderCellDef>ACCEPTED ON</th>
+            <td mat-cell *matCellDef="let element">{{element.ACCEPTED_ON}}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="PO_AMOUNT">
+            <th mat-header-cell *matHeaderCellDef>P.O.AMOUNT</th>
+            <td mat-cell *matCellDef="let element">{{element.PO_AMOUNT}}</td>
+          </ng-container>
+    
+    
+        <ng-container matColumnDef="STATUS">
+            <th mat-header-cell *matHeaderCellDef>STATUS</th>
+            <td mat-cell *matCellDef="let element" > 
+          
+              <button mat-raised-button color="primary" style="background-color: #b0fcef86;width:110px; min-width: unset;color:#2d8979">{{element.STATUS}}</button>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="TOTAL_GRN">
+            <th mat-header-cell *matHeaderCellDef>TOTAL GRN AGAINST P.O.</th>
+            <td mat-cell *matCellDef="let element">{{element.TOTAL_GRN}}</td>
+          </ng-container>
+          <ng-container matColumnDef="PAID_INVOICES">
+            <th mat-header-cell *matHeaderCellDef>PAID INVOICES/PENDING INVOICES AGAINST P.O.</th>
+            <td mat-cell *matCellDef="let element">{{element.PAID_INVOICES}}</td>
+          </ng-container>
+    
+        <ng-container matColumnDef="ACTION">
+            <th mat-header-cell *matHeaderCellDef>ACTION</th>
+            <td mat-cell *matCellDef="let element"style="border-block-end-style: none;"><a routerLink="/purchaseorderdetail"><i class="far fa-eye" style="color: #AE87B8; font-size: 20px;"></i></a></td>
+          </ng-container>
+          
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr
+            mat-row
+            
+            
+            *matRowDef="let row; columns: displayedColumns;"
+            
+        ></tr>
+        
+     
+      </table>
+      <mat-paginator [pageSizeOptions]="[5,10,20]" showFirstLastButtons aria-label="Select page of periodic elements"></mat-paginator>
+    
+    </div>
+    
+    <div class="text-end">
+      <button type="button" class="export btn btn-lg">Export</button>
+    </div>
+    
+     
+
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+</body>
